@@ -27,3 +27,8 @@ ro.surface_flinger.display_update_imminent_timeout_ms=50
 vendor.hwc.dpp.downscale=2
 ro.surface_flinger.support_kernel_idle_timer=true
 ro.surface_flinger.ignore_hdr_camera_layers=true
+
+# enable debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
