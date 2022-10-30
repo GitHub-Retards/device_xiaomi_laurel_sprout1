@@ -37,3 +37,9 @@ ro.debuggable=1
 framework_watchdog.fatal_window.second=600
 framework_watchdog.fatal_count=3
 
+# Power-saving props
+ro.vendor.use_data_netmgrd=true
+ro.vold.umsdirtyratio=20
+ro.ril.disable.power.collapse=0
+power.saving.mode=1
+pm.sleep_mode=1
