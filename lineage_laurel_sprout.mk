@@ -75,5 +75,7 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 # Pixel
 WITH_GMS := true
+TARGET_ENABLE_OOS_GBOARD_PADDINGS := true
+
 
 BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
