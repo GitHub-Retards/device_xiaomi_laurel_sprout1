@@ -94,7 +94,6 @@ LOCAL_OVERRIDES_PACKAGES := \
 	OBDM_Permissions \
 	OemDmTrigger \
 	PixelLiveWallpaperPrebuilt \
-	PixelWallpapers2021 \
 	PrebuiltGmail \
 	RecorderPrebuilt \
 	SafetyHubPrebuilt \

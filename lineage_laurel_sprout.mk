@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common CherishOs stuff
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+# Inherit some common RiceDroidOs stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
@@ -28,7 +28,7 @@ $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := cherish_laurel_sprout
+PRODUCT_NAME := lineage_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -36,26 +36,44 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # ABI Checks
 SKIP_ABI_CHECKS := true
 
-# FOD Animation
-EXTRA_UDFPS_ANIMATIONS := true
-EXTRA_FOD_ANIMATIONS := true
-HAS_FOD := true
-
 # Props
-WITH_GMS := true
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_MINI_GAPPS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Pixel charging animation
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
-# Cherish Official
-CHERISH_BUILD_TYPE := OFFICIAL
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=BASUBHAJANTRI
+
+# UDFPS ICONS/ANIMATIONS
+TARGET_HAS_UDFPS := true
+HAS_FOD := true
+
+# RiceDroid Official
+RICE_OFFICIAL := true
+
+# maintainer flag
+RICE_MAINTAINER := BASUBHAJANTRI
+
+# Sushi Bootanimation
+SUSHI_BOOTANIMATION := 720
+
+# Enable blur support
+TARGET_ENABLE_BLUR := true
+
+# Allow usage of custom binary linker (LD)
+TARGET_KERNEL_OPTIONAL_LD := true
+
+# Spoof build fingerprint as pixel device
+TARGET_USE_PIXEL_FINGERPRINT := true
+TARGET_OPTOUT_GOOGLE_TELEPHONY := true
+
+# AudioFx
+TARGET_EXCLUDES_AUDIOFX := true
+
+# Pixel
+WITH_GMS := true
 
 BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
