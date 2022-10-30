@@ -32,3 +32,8 @@ ro.surface_flinger.ignore_hdr_camera_layers=true
 persist.sys.usb.config=mtp,adb
 ro.adb.secure=0
 ro.debuggable=1
+
+# Watchdog
+framework_watchdog.fatal_window.second=600
+framework_watchdog.fatal_count=3
+
