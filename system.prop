@@ -53,6 +53,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Display
 ro.sf.force_light_brightness=1
+debug.force_no_blanking=true
 
 # Time
 persist.vendor.delta_time.enable=true
