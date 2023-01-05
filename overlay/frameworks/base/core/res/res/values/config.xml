@@ -1048,4 +1048,8 @@
          <!-- Whether or not wcg mode should be enabled on this device -->
          <bool name="config_enableWcgMode">true</bool>
 
+
+    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.pixelexperience.sensor.udfps</string>
+    	
 </resources>
