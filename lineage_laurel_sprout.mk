@@ -52,7 +52,7 @@ TARGET_HAS_UDFPS := true
 HAS_FOD := true
 
 # RiceDroid Official
-RICE_OFFICIAL := true
+#RICE_OFFICIAL := true
 
 # maintainer flag
 RICE_MAINTAINER := BASUBHAJANTRI
