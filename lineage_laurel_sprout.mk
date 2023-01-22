@@ -68,7 +68,7 @@ TARGET_KERNEL_OPTIONAL_LD := true
 
 # Spoof build fingerprint as pixel device
 TARGET_USE_PIXEL_FINGERPRINT := true
-TARGET_USE_GOOGLE_TELEPHONY := false
+TARGET_USE_GOOGLE_TELEPHONY := true
 
 # AudioFx
 TARGET_EXCLUDES_AUDIOFX := true
