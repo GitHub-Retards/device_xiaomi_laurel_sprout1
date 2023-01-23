@@ -346,3 +346,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # System
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.binary_xml=false
+
+# Display Brightness
+ro.sf.force_hwc_brightness=1
+ro.sf.force_light_brightness=1
