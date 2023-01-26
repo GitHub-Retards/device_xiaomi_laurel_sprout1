@@ -575,3 +575,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable zygote critical window.
 PRODUCT_PROPERTY_OVERRIDES += \
     zygote.critical_window.minute=10
+
+
+# LMK tuning
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.filecache_min_kb=153600 \
+    ro.lmk.kill_timeout_ms=50 \
+    ro.lmk.stall_limit_critical=40
