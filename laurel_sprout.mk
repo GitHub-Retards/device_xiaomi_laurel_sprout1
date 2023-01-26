@@ -570,3 +570,8 @@ $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vend
 # IncrementalFS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=yes
+
+
+# Enable zygote critical window.
+PRODUCT_PROPERTY_OVERRIDES += \
+    zygote.critical_window.minute=10
