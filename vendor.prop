@@ -23,6 +23,8 @@ ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.surface_flinger.protected_contents=true
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 
 # USB
 vendor.usb.diag.func.name=diag
