@@ -79,8 +79,13 @@ ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
+
 # Dex2oat
 dalvik.vm.image-dex2oat-filter=speed
 dalvik.vm.image-dex2oat-threads=8
 dalvik.vm.dex2oat-filter=speed
 dalvik.vm.dex2oat-threads=8
+
+# Volume Steps
+ro.config.media_vol_default=8
+ro.config.media_vol_steps=25
