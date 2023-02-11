@@ -25,6 +25,7 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.surface_flinger.protected_contents=true
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
+ro.vendor.perf.scroll_opt=true
 
 # USB
 vendor.usb.diag.func.name=diag
