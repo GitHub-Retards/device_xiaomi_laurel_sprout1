@@ -585,3 +585,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+
+
+
+# XiaomiAdvancedDisplay
+PRODUCT_PACKAGES += \
+    AdvancedDisplay \
