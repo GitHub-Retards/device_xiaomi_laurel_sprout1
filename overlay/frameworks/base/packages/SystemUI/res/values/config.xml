@@ -132,4 +132,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- Burn in protection -->
     <bool name="config_statusBarBurnInProtection">true</bool>
 
+    <!-- Whether to pulse onFingerDown actions instead
+        of waking the screen while the screen is off or in lpm. -->
+    <bool name="config_pulseOnFingerDown">true</bool>
+
 </resources>
