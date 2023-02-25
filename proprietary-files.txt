@@ -3549,6 +3549,8 @@ vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc_default_listener.so
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 
 # Soter
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
