@@ -350,3 +350,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Display Brightness
 ro.sf.force_hwc_brightness=1
 ro.sf.force_light_brightness=1
+
+# Usb
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.usb.config.extra=none \
+vendor.usb.dpl.inst.name=dpl \
+vendor.usb.rmnet.func.name=rmnet_bam \
+vendor.usb.rmnet.inst.name=rmnet \
+vendor.usb.rndis.func.name=rndis_bam
