@@ -25,6 +25,10 @@
 #include <fstream>
 #include <thread>
 
+#include <android-base/file.h>
+#include <chrono>
+#include <cmath>
+
 #include <fcntl.h>
 #include <poll.h>
 #include <sys/stat.h>
@@ -42,6 +46,18 @@
 #define FOD_STATUS_PATH "/sys/class/touch/tp_dev/fod_status"
 #define FOD_STATUS_ON 1
 #define FOD_STATUS_OFF -1
+#define DIM_LAYER_OFF_DELAY 85ms
+#define DIM_LAYER_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm"
+
+using ::android::base::WriteStringToFile;
+using namespace std::chrono_literals;
+
+// Write value to path and close file.
+bool WriteToFile(const std::string& path, uint32_t content) {
+    return WriteStringToFile(std::to_string(content), path);
+}
+
+// anonymous namespace
 
 namespace android {
 namespace hardware {
@@ -107,6 +123,7 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
     set(FOD_STATUS_PATH, FOD_STATUS_ON);
+    WriteToFile(DIM_LAYER_HBM_PATH, 1);
     std::thread([this]() {
         std::this_thread::sleep_for(std::chrono::microseconds(10));
         set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_ON);
@@ -118,7 +135,10 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 Return<void> BiometricsFingerprint::onFingerUp() {
     set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_OFF);
     set(FOD_STATUS_PATH, FOD_STATUS_OFF);
+    std::this_thread::sleep_for(DIM_LAYER_OFF_DELAY);
+    WriteToFile(DIM_LAYER_HBM_PATH, 0);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
+    WriteToFile(DIM_LAYER_HBM_PATH, 1);
     return Void();
 }
 
