@@ -83,3 +83,6 @@ BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/
 
 # Camera
 TARGET_BUILD_APERTURE_CAMERA := true
+
+# Disable EPPE
+TARGET_DISABLE_EPPE := true
