@@ -103,6 +103,6 @@ void vendor_load_properties()
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
-    property_override("ro.rice.maintainer", "BASUBHAJANTRI");
+    property_override("ro.rising.maintainer", "BASUBHAJANTRI");
     vendor_load_device_properties();
 }

@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common RiceDroidOs stuff
+# Inherit some common RisingOs stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from laurel_sprout device
@@ -51,14 +51,10 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_HAS_UDFPS := true
 HAS_FOD := true
 
-# RiceDroid Official
-#RICE_OFFICIAL := true
 
 # maintainer flag
-RICE_MAINTAINER := BASUBHAJANTRI
+RISING_MAINTAINER := BASUBHAJANTRI
 
-# Sushi Bootanimation
-SUSHI_BOOTANIMATION := 720
 
 # Enable blur support
 TARGET_ENABLE_BLUR := true
@@ -75,7 +71,6 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 # Pixel
 WITH_GMS := true
-RICE_PACKAGE_TYPE := PIXEL
 TARGET_ENABLE_PIXEL_GBOARD_PADDINGS := true
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 
