@@ -28,6 +28,9 @@ debug.hwui.target_cpu_time_percent=30
 ro.vendor.perf.scroll_opt=true
 ro.hwui.render_ahead=10
 
+# Dex2oat
+pm.dexopt.first-boot=quicken
+pm.dexopt.bg-dexopt=everything
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
