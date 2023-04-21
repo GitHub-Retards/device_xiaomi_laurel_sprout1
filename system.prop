@@ -54,6 +54,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Display
 ro.sf.force_light_brightness=1
 debug.force_no_blanking=true
+debug.sf.latch_unsignaled=1
 
 # Time
 persist.vendor.delta_time.enable=true
