@@ -26,6 +26,10 @@ DEVICE_PATH := device/xiaomi/laurel_sprout
 BUILD_BROKEN_DUP_RULES := true
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# Camera
+TARGET_USES_PREBUILT_CAMERA_SERVICE := true
+
+
 # A/B
 AB_OTA_UPDATER := true
 
