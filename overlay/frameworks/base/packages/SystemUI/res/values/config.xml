@@ -136,4 +136,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         of waking the screen while the screen is off or in lpm. -->
     <bool name="config_pulseOnFingerDown">true</bool>
 
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
+
 </resources>
