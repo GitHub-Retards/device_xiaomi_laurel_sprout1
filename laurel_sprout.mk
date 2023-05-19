@@ -610,3 +610,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.earlyGl.sf.duration=9500000 \
     debug.sf.earlyGl.app.duration=16000000
 endif
+# Dex
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+
+# Call recording for Google Dialer
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
