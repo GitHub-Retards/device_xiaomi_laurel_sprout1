@@ -27,6 +27,10 @@ debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 ro.vendor.perf.scroll_opt=true
 ro.hwui.render_ahead=10
+ro.surface_flinger.set_idle_timer_ms=80
+ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # Dex2oat
 pm.dexopt.first-boot=quicken
