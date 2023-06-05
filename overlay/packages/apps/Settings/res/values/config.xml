@@ -71,5 +71,11 @@
     <bool name="config_supports_dynamic_refresh_rate_controls">true</bool>
     <!-- If using legacy - please use config_show_min_refresh_rate_switch prop -->
 
+    <!-- Whether the device enable the standalone (SA) mode of 5G NR.-->
+    <bool name="config_telephony5gStandalone">true</bool>
+
+    <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
+    <bool name="config_telephony5gNonStandalone">true</bool>
+
 
 </resources>
