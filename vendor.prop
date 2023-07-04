@@ -40,7 +40,9 @@ pm.dexopt.bg-dexopt=everything
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
-
+vendor.usb.dpl.inst.name=dpl
+vendor.usb.rmnet.func.name=gsi
+vendor.usb.rmnet.inst.name=rmnet
 
 # Zygote
 zygote.critical_window.minute=10
