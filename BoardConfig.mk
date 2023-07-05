@@ -225,3 +225,5 @@ include vendor/xiaomi/laurel_sprout/BoardConfigVendor.mk
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Camera
+TARGET_USES_PREBUILT_CAMERA_SERVICE := true
