@@ -197,6 +197,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fastbootd.available=true
+    vendor.camera.aux.packagelist=com.android.camera
 
 # FOD
 PRODUCT_PACKAGES += \
