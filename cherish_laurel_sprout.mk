@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common RisingOs stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ChwrishOs stuff
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
@@ -28,7 +28,7 @@ $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_laurel_sprout
+PRODUCT_NAME := cherish_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -42,18 +42,23 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
 # Pixel charging animation
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
 
-# UDFPS ICONS/ANIMATIONS
-TARGET_HAS_UDFPS := true
+# Cherish Official
+CHERISH_BUILD_TYPE := OFFICIAL
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=BASUBHAJANTRI
+
+
+# FOD Animation
+EXTRA_UDFPS_ANIMATIONS := true
+EXTRA_FOD_ANIMATIONS := true
 HAS_FOD := true
-
-
-# maintainer flag
-RISING_MAINTAINER := BASUBHAJANTRI
 
 
 # Enable blur support
@@ -78,8 +83,10 @@ TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 
 BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 
-# Camera
-TARGET_BUILD_APERTURE_CAMERA := true
 
 # Disable EPPE
 TARGET_DISABLE_EPPE := true
+
+
+# MIUICAMERA
+$(call inherit-product, vendor/miuicamera/common/common-vendor.mk)
