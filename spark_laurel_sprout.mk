@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common RisingOs stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common SparkOs stuff
+$(call inherit-product, vendor/spark/config/common_full_phone.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
@@ -28,7 +28,7 @@ $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_laurel_sprout
+PRODUCT_NAME := spark_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -42,6 +42,14 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USES_AOSP_RECOVERY := true
+USE_PIXEL_CHARGER := true
+WITH_GAPPS := true
+TARGET_FACE_UNLOCK_OPTOUT := true
+TARGET_SUPPORTS_ADAPTIVE_CHARGING := true
+
+# Spoofs As official
+SPARK_BUILD_TYPE := OFFICIAL
 
 # Pixel charging animation
 TARGET_INCLUDE_PIXEL_CHARGER := true
@@ -50,10 +58,7 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 # UDFPS ICONS/ANIMATIONS
 TARGET_HAS_UDFPS := true
 HAS_FOD := true
-
-
-# maintainer flag
-RISING_MAINTAINER := BASUBHAJANTRI
+EXTRA_UDFPS_ANIMATIONS := true
 
 
 # Enable blur support
